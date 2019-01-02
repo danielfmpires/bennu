@@ -129,6 +129,7 @@ public abstract class MenuItem extends MenuItem_Base implements Comparable<MenuI
      * Returns whether this item is available for the current user.
      * Implementation Node: This method ONLY checks the current node, not the full chain!
      */
+    @Atomic
     protected boolean isItemAvailableForCurrentUser() {
         return getGroup().isMember(Authenticate.getUser());
     }
