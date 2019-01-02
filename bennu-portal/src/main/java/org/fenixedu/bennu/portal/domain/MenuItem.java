@@ -110,6 +110,7 @@ public abstract class MenuItem extends MenuItem_Base implements Comparable<MenuI
      * @return
      *         Whether the given user can access this item
      */
+    @Atomic
     public boolean isAvailable(User user) {
         return getGroup().isMember(user) && getParent().isAvailable(user);
     }
